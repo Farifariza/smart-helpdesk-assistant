@@ -39,10 +39,10 @@ export const ProjectDocumentationModal: React.FC<ModalProps> = ({ isOpen, onClos
             </div>
             <div>
               <h2 className="font-bold text-base sm:text-lg">
-                Smart Helpdesk Assistant – Õppejuhend ja dokumentatsioon
+                Smart Helpdesk Assistant – Süsteemi dokumentatsioon ja teadmusbaas
               </h2>
               <p className="text-xs text-slate-400">
-                Juhised kohalikuks käivitamiseks, avaldamiseks ja õppetöö esitlemiseks
+                Logistika standardprotseduurid (SOP), süsteemi arhitektuur ja tehnilised juhised
               </p>
             </div>
           </div>

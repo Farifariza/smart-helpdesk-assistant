@@ -391,16 +391,16 @@ ${result.escalationGuidance}
       <footer className="bg-white border-t border-slate-200 py-4 mt-12 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p>
-            <strong>Smart Helpdesk Assistant</strong> • Logistika- ja kullerteenuste klienditoe tehisintellekti prototüüp
+            <strong>Smart Helpdesk Assistant</strong> • Logistika- ja kullerteenuste klienditoe töölaud
           </p>
           <div className="flex items-center gap-4 text-slate-400 text-[11px]">
-            <span>Õppetöö projekt</span>
+            <span>Versioon 1.0 (Logistika)</span>
             <span>•</span>
             <button
               onClick={() => setIsDocsOpen(true)}
               className="text-teal-700 hover:underline font-medium cursor-pointer"
             >
-              Käivitamis- ja paigaldusjuhend
+              SOP Teadmusbaas ja süsteemiinfo
             </button>
           </div>
         </div>
