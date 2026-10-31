@@ -1,0 +1,6 @@
+{
+  "name": "Smart Helpdesk Assistant",
+  "description": "Tehisintellektil põhinev logistika- ja kullerettevõtte klienditoe abiline probleemide analüüsimiseks ja professionaalsete vastuste koostamiseks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
