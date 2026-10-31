@@ -63,13 +63,13 @@ export const LANGUAGES: LanguageOption[] = [
 export const SAMPLE_CASES: PresetSampleCase[] = [
   {
     id: 'official-test-case',
-    title: 'Ametlik näidisjuhtum (juhendist)',
-    badge: 'Soovituslik testjuhtum',
+    title: 'Saadetise viibimine',
+    badge: 'Viivitus',
     category: 'saadetise_hilinemine',
     language: 'et',
     trackingNumber: 'EE987654321EE',
     clientMessage: 'Minu saadetise jälgimine pole juba kolm päeva uuenenud. Kas saate öelda, kus minu pakk asub?',
-    isOfficialTestCase: true,
+    isOfficialTestCase: false,
   },
   {
     id: 'parcel-locker-case',

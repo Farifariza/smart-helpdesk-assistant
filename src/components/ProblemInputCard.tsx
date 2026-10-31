@@ -74,28 +74,23 @@ export const ProblemInputCard: React.FC<ProblemInputCardProps> = ({
           </div>
 
           <span className="text-xs text-slate-500">
-            Vali valmis näidis või kleebi kliendi sõnum
+            Uus kliendipöördumine
           </span>
         </div>
 
-        {/* Quick Sample Selector Pills */}
+        {/* Quick Template Selector Pills */}
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
           <span className="text-xs font-medium text-slate-500 mr-1 flex items-center gap-1">
             <FileQuestion className="w-3.5 h-3.5" />
-            Kiirnäidised:
+            Tüüpmallid:
           </span>
           {SAMPLE_CASES.map((preset) => (
             <button
               key={preset.id}
               onClick={() => onSelectPreset(preset)}
-              className={`text-xs px-2.5 py-1 rounded-full border transition-all cursor-pointer font-medium ${
-                preset.isOfficialTestCase
-                  ? 'bg-teal-50 text-teal-800 border-teal-300 hover:bg-teal-100 ring-1 ring-teal-400/50'
-                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
-              }`}
+              className="text-xs px-2.5 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition-all cursor-pointer font-medium"
               title={preset.title}
             >
-              {preset.isOfficialTestCase && <span className="font-bold mr-1">⭐</span>}
               {preset.title}
             </button>
           ))}

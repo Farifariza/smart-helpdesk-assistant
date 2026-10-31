@@ -27,14 +27,12 @@ import {
 const STORAGE_KEY = 'smart_helpdesk_cases_v1';
 
 export default function App() {
-  // Input form state
-  const [clientMessage, setClientMessage] = useState<string>(
-    'Minu saadetise jälgimine pole juba kolm päeva uuenenud. Kas saate öelda, kus minu pakk asub?'
-  );
+  // Input form state (clean initial state for fresh ticket input)
+  const [clientMessage, setClientMessage] = useState<string>('');
   const [category, setCategory] = useState<CategoryId>('saadetise_hilinemine');
   const [language, setLanguage] = useState<LanguageId>('et');
   const [tone, setTone] = useState<ToneId>('viisakas');
-  const [trackingNumber, setTrackingNumber] = useState<string>('EE987654321EE');
+  const [trackingNumber, setTrackingNumber] = useState<string>('');
 
   // Execution & results state
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -335,39 +333,6 @@ ${result.escalationGuidance}
 
       {/* Main Workspace Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        {/* Welcome & Instructions Sub-header */}
-        <div className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 bg-gradient-to-r from-slate-900 via-slate-800 to-teal-950 text-white p-5 rounded-2xl shadow-sm border border-slate-800">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse" />
-              <h2 className="text-base sm:text-lg font-bold">
-                Klienditoe logistika juhtpaneel
-              </h2>
-            </div>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
-              Sisesta kliendi küsimus või kaebus. Tehisintellekt koostab logistika standardprotseduuridele vastavad sammud ja viisaka vastuse kliendi emakeeles (eesti, vene või inglise keeles).
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              onClick={() => handleSelectPreset(SAMPLE_CASES[0])}
-              className="px-3.5 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold text-xs transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
-              title="Laadi juhendi ametlik näidispäring"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Laadi ametlik näidis</span>
-            </button>
-            <button
-              onClick={() => setIsDocsOpen(true)}
-              className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 cursor-pointer border border-slate-700"
-            >
-              <HelpCircle className="w-3.5 h-3.5 text-teal-400" />
-              <span>Õppejuhend</span>
-            </button>
-          </div>
-        </div>
-
         {/* 2-Column Responsive Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           {/* Left Column: Input Form (5 cols on lg) */}

@@ -113,8 +113,8 @@ export const AnalysisResultsView: React.FC<AnalysisResultsViewProps> = ({
           Sisesta vasakult kliendi probleemi kirjeldus, vali kategooria ja keel ning vajuta nupule <strong>„Analüüsi probleemi“</strong>.
         </p>
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">
-          <ArrowRight className="w-3.5 h-3.5 text-teal-600" />
-          <span>Võid testida ka ülal asuvat ametlikku näidisjuhtumit</span>
+          <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+          <span>Süsteem on valmis uue juhtumi analüüsimiseks</span>
         </div>
       </div>
     );
